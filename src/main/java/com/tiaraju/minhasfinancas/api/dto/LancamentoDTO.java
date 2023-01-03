@@ -4,8 +4,10 @@ import java.math.BigDecimal;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.Setter;
 
 @Data
+@Setter
 @Builder
 public class LancamentoDTO {
 

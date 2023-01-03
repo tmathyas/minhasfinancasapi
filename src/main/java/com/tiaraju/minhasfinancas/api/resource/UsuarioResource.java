@@ -12,15 +12,18 @@ import com.tiaraju.minhasfinancas.exceptions.ErroAutenticacao;
 import com.tiaraju.minhasfinancas.model.entity.Usuario;
 import com.tiaraju.minhasfinancas.service.UsuarioService;
 
+import lombok.RequiredArgsConstructor;
+
 @RestController
 @RequestMapping("/api/usuarios")
+@RequiredArgsConstructor
 public class UsuarioResource {
 
-	private UsuarioService service;
+	private final UsuarioService service;
 
-	public UsuarioResource(UsuarioService service) {
-		this.service = service;
-	}
+//	public UsuarioResource(UsuarioService service) {
+//		this.service = service;
+//	}
 
 	@PostMapping("/salvar")
 	public ResponseEntity salvar(@RequestBody UsuarioDTO dto) {
